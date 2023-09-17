@@ -1,0 +1,233 @@
+@font-face {
+  font-family: roboto-bold;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: roboto-regular;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--CharcoalGrey);
+}
+
+.container {
+  width: 50rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  padding: 4rem;
+  background-color: var(--white);
+  box-shadow: 7px 7px 21px 4px rgba(0, 0, 0, 0.72);
+}
+
+.sub-container {
+  width: 25rem;
+  height: 30rem;
+}
+
+.illustration {
+  width: 25rem;
+  height: 30rem;
+  background-image: url(assets/images/illustration-sign-up-desktop.svg);
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 4rem;
+}
+.join {
+  font-family: roboto-regular;
+}
+.benifits {
+  font-family: roboto-regular;
+  margin: 20px 0px;
+}
+.benifits-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.benifits-text img {
+  padding-right: 10px;
+}
+
+.benifits-text p {
+  margin: 10px 5px;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: roboto-bold;
+}
+
+.input-email {
+  min-width: 24rem;
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 10px 0px;
+  border-radius: 10px;
+}
+
+.submit {
+  font-family: roboto-bold;
+  min-width: 100%;
+  margin: 10px 0px;
+  height: 3rem;
+  border: none;
+  color: var(--white);
+  background-color: var(--DarkSlateGrey);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.submit:active {
+  background: linear-gradient(90deg, var(--Tomato) 0%, orange 100%);
+}
+.email-label {
+  font-family: roboto-bold;
+}
+.valid {
+  display: flex;
+  flex-direction: row;
+}
+
+.error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.errors {
+  font-size: 0.8rem;
+  font-family: roboto-bold;
+  color: var(--Tomato);
+  opacity: 0;
+}
+.js-error {
+  font-size: 0.8rem;
+  font-family: roboto-bold;
+  color: var(--Tomato);
+  opacity: 1;
+}
+
+.js-input-error {
+  border: 2px solid var(--Tomato);
+  font-family: roboto-bold;
+  color: var(--Tomato);
+
+  background-color: hsla(4, 100%, 67%, 0.2);
+}
+
+/* congrats css*/
+.congrats-container {
+  width: 25rem;
+  height: 25rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: space-evenly;
+  padding: 4rem;
+  border-radius: 30px;
+  box-shadow: 7px 7px 21px 4px rgba(0, 0, 0, 0.72);
+}
+.success {
+  width: 3rem;
+  height: 3rem;
+  background: url(assets/images/icon-success.svg) no-repeat center;
+  background-size: cover;
+}
+.Thanks p {
+  font-family: roboto-bold;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 1rem;
+}
+.confirmation p {
+  font-family: roboto-regular;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-right: 2rem;
+}
+.para span {
+  font-weight: bold;
+}
+.dismiss {
+  font-family: roboto-bold;
+  font-size: 0.9rem;
+  width: 100%;
+  height: 3.5rem;
+  color: white;
+  background: var(--DarkSlateGrey);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.dismiss:active {
+  background: linear-gradient(90deg, var(--Tomato) 0%, orange 100%);
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 28rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+
+  .illustration {
+    align-items: center;
+    width: 100%;
+    height: 20rem;
+    padding-top: 0px;
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+  }
+
+  .sub-container {
+    padding: 0px;
+  }
+
+  .congrats-container {
+    width: 25rem;
+    height: 100vh;
+    padding: 3rem;
+    border-radius: 0px;
+  }
+}
