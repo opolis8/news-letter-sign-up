@@ -31,7 +31,7 @@ body {
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
-  padding: 4rem;
+  padding: 2rem;
   background-color: var(--white);
   box-shadow: 7px 7px 21px 4px rgba(0, 0, 0, 0.72);
 }
